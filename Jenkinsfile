@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy SQL') {
             steps {
                 
-                sh ""
+                sh "aws eks --region eu-west-1 update-kubeconfig --name TaskCluster"
                 sh "kubectl apply -f mysql.yaml"
                 
             }
