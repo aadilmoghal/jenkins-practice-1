@@ -2,17 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Create cluster') {
             steps {
                 echo 'Building..'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy SQL Pod') {
+        stage('Deploy SQL pod') {
             steps {
                 
                 sh "aws eks --region eu-west-1 update-kubeconfig --name TaskCluster"
