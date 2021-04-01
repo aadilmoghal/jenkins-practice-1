@@ -12,7 +12,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy SQL') {
+        stage('Deploy SQL Pod') {
             steps {
                 
                 sh "aws eks --region eu-west-1 update-kubeconfig --name TaskCluster"
