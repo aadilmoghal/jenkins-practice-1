@@ -1,5 +1,8 @@
+
+if kubectl config view --- cluster: null
+
 eksctl create cluster /
---name MySQLCluster /
+--name TaskCluster /
 --region eu-west-2 /
 --nodegroup-name DemoNodes /
 --nodes 2 /
