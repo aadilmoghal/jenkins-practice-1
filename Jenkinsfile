@@ -10,7 +10,7 @@ pipeline {
         stage('Deploy SQL pod') {
             steps {
                 
-                sh "aws eks --region eu-west-1 update-kubeconfig --name DemoCluster"
+                sh "aws eks --region eu-west-2 update-kubeconfig --name TaskCluster"
                 sh "kubectl apply -f mysql.yaml"
                 
             }
