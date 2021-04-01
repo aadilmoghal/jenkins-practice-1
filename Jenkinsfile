@@ -12,9 +12,12 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Deploy SQL') {
             steps {
-                echo 'Deploying....'
+                
+                sh ""
+                sh "kubectl apply -f mysql.yaml"
+                
             }
         }
     }
