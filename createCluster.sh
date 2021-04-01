@@ -1,4 +1,4 @@
-
+test
 if kubectl config view --- cluster: null
 
 eksctl create cluster /
